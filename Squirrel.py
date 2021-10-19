@@ -1,11 +1,9 @@
-
 def squirrel(N):
-    for i in range(1,N):
-        factorial = N * (N-1)
-    if factorial > 10 :
-        result = factorial % 10
-    else: 
-        result = factorial % 1
+    factorial = 1
+    for i in range(1,N+1):
+        factorial *= i
+    result = factorial
+    str_of_factorial = str(factorial)
+    for i in range(len(str_of_factorial)-1):
+        result = result // 10
     return result
-
-print(squirrel(50))
